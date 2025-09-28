@@ -59,7 +59,7 @@ class _TransactionListScreenState extends State<TransactionListScreen> {
                     Icon(
                       Icons.receipt_long_outlined,
                       size: 80,
-                      color: Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
+                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
                     ),
                     const SizedBox(height: 24),
                     Text(
@@ -67,7 +67,7 @@ class _TransactionListScreenState extends State<TransactionListScreen> {
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: Theme.of(context).colorScheme.onSurface.withOpacity(0.7),
+                        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),
                       ),
                     ),
                     const SizedBox(height: 8),
@@ -75,7 +75,7 @@ class _TransactionListScreenState extends State<TransactionListScreen> {
                       'Start tracking your finances by adding\nyour first transaction',
                       style: TextStyle(
                         fontSize: 16,
-                        color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
+                        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
                       ),
                       textAlign: TextAlign.center,
                     ),

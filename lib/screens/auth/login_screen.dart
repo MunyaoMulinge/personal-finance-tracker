@@ -121,7 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 'Track your KSh with ease.',
                                 style: TextStyle(
                                   fontSize: 18,
-                                  color: Theme.of(context).colorScheme.onPrimary.withOpacity(0.8),
+                                  color: Theme.of(context).colorScheme.onPrimary.withValues(alpha: 0.8),
                                 ),
                               ),
                               const SizedBox(height: 48),
@@ -207,7 +207,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 children: [
                                   Expanded(
                                     child: Divider(
-                                      color: Theme.of(context).colorScheme.onSurface.withOpacity(0.3),
+                                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.3),
                                     ),
                                   ),
                                   Padding(
@@ -217,14 +217,14 @@ class _LoginScreenState extends State<LoginScreen> {
                                     child: Text(
                                       'OR',
                                       style: TextStyle(
-                                        color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
+                                        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
                                         fontSize: 14,
                                       ),
                                     ),
                                   ),
                                   Expanded(
                                     child: Divider(
-                                      color: Theme.of(context).colorScheme.onSurface.withOpacity(0.3),
+                                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.3),
                                     ),
                                   ),
                                 ],
@@ -249,7 +249,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 style: OutlinedButton.styleFrom(
                                   minimumSize: const Size(double.infinity, 56),
                                   side: BorderSide(
-                                    color: Theme.of(context).colorScheme.onSurface.withOpacity(0.3),
+                                    color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.3),
                                   ),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(28),
@@ -265,7 +265,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   Text(
                                     "Don't have an account? ",
                                     style: TextStyle(
-                                      color: Theme.of(context).colorScheme.onSurface.withOpacity(0.7),
+                                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),
                                       fontSize: 14,
                                     ),
                                   ),
