@@ -85,13 +85,13 @@ class _LoginScreenState extends State<LoginScreen> {
           return LoadingOverlay(
             isLoading: authProvider.isLoading,
             child: Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.center,
                   colors: [
-                    Color(0xFF4CAF50), // Primary green
-                    Color(0xFFF5F8F5), // Light green/white
+                    Theme.of(context).colorScheme.primary,
+                    Theme.of(context).colorScheme.surface,
                   ],
                 ),
               ),
@@ -108,20 +108,20 @@ class _LoginScreenState extends State<LoginScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               // Welcome text
-                              const Text(
+                              Text(
                                 'Karibu!',
                                 style: TextStyle(
                                   fontSize: 32,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.white,
+                                  color: Theme.of(context).colorScheme.onPrimary,
                                 ),
                               ),
                               const SizedBox(height: 8),
-                              const Text(
+                              Text(
                                 'Track your KSh with ease.',
                                 style: TextStyle(
                                   fontSize: 18,
-                                  color: Colors.white70,
+                                  color: Theme.of(context).colorScheme.onPrimary.withOpacity(0.8),
                                 ),
                               ),
                               const SizedBox(height: 48),

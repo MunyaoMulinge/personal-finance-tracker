@@ -27,20 +27,11 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: const Text(
-          'Categories',
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        title: const Text('Categories'),
         actions: [
           IconButton(
-            icon: const Icon(Icons.add, color: Colors.black),
+            icon: const Icon(Icons.add),
             onPressed: () => _showAddCategoryDialog(),
           ),
         ],
@@ -65,7 +56,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                     Icon(
                       Icons.category_outlined,
                       size: 80,
-                      color: Colors.grey,
+                      color: Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
                     ),
                     SizedBox(height: 24),
                     Text(
@@ -73,7 +64,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: Colors.grey,
+                        color: Theme.of(context).colorScheme.onSurface.withOpacity(0.7),
                       ),
                     ),
                   ],
@@ -122,26 +113,14 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _showAddCategoryDialog,
-        backgroundColor: const Color(0xFF4CAF50),
-        child: const Icon(Icons.add, color: Colors.white),
+        child: const Icon(Icons.add),
       ),
     );
   }
 
   Widget _buildCategoryCard(Category category, {required bool isDefault}) {
-    return Container(
+    return Card(
       margin: const EdgeInsets.only(bottom: 8),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
-            blurRadius: 8,
-            offset: const Offset(0, 2),
-          ),
-        ],
-      ),
       child: ListTile(
         contentPadding: const EdgeInsets.all(16),
         leading: Container(

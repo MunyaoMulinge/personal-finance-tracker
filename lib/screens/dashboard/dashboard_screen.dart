@@ -38,9 +38,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
           children: [
             Text(
               'Good ${_getGreeting()}!',
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 16,
-                color: Colors.grey,
+                color: Theme.of(context).colorScheme.onSurface.withOpacity(0.7),
                 fontWeight: FontWeight.normal,
               ),
             ),
@@ -50,9 +50,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 final name = email.split('@').first;
                 return Text(
                   name.isNotEmpty ? name : 'User',
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 20,
-                    color: Colors.black,
+                    color: Theme.of(context).colorScheme.onSurface,
                     fontWeight: FontWeight.bold,
                   ),
                 );
@@ -62,7 +62,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.notifications_outlined, color: Colors.black),
+            icon: const Icon(Icons.notifications_outlined),
             onPressed: () {
               // TODO: Implement notifications
             },
@@ -99,8 +99,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ),
           );
         },
-        backgroundColor: const Color(0xFF4CAF50),
-        child: const Icon(Icons.add, color: Colors.white),
+        child: const Icon(Icons.add),
       ),
     );
   }
