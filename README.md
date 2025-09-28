@@ -1,4 +1,4 @@
-# Personal Finance Tracker
+# Personal Finance Tracker - Built during off-hours as a side project
 A Flutter app for tracking KSh income/expenses with charts, backed by Spring Boot & Supabase.
 
 ## MVP Features
@@ -14,3 +14,4 @@ A Flutter app for tracking KSh income/expenses with charts, backed by Spring Boo
 - DB: Supabase
 
 Launch Goal: Oct 31, 2025
+
