@@ -77,14 +77,14 @@ class AuthProvider extends ChangeNotifier {
         password: password,
       );
 
-      if (response.user != null) {
+      if (response.user != null && response.session != null) {
         _user = response.user;
         _status = AuthStatus.authenticated;
         _errorMessage = null;
         notifyListeners();
         return true;
       } else {
-        _setError('Sign in failed. Please check your credentials.');
+        _setError('Invalid email or password. Please check your credentials.');
         return false;
       }
     } catch (e) {

@@ -206,7 +206,9 @@ class _LoginScreenState extends State<LoginScreen> {
                               Row(
                                 children: [
                                   Expanded(
-                                    child: Divider(color: Colors.grey[400]),
+                                    child: Divider(
+                                      color: Theme.of(context).colorScheme.onSurface.withOpacity(0.3),
+                                    ),
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.symmetric(
@@ -215,13 +217,15 @@ class _LoginScreenState extends State<LoginScreen> {
                                     child: Text(
                                       'OR',
                                       style: TextStyle(
-                                        color: Colors.grey[600],
+                                        color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
                                         fontSize: 14,
                                       ),
                                     ),
                                   ),
                                   Expanded(
-                                    child: Divider(color: Colors.grey[400]),
+                                    child: Divider(
+                                      color: Theme.of(context).colorScheme.onSurface.withOpacity(0.3),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -244,7 +248,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                 label: const Text('Sign in with Google'),
                                 style: OutlinedButton.styleFrom(
                                   minimumSize: const Size(double.infinity, 56),
-                                  side: BorderSide(color: Colors.grey[400]!),
+                                  side: BorderSide(
+                                    color: Theme.of(context).colorScheme.onSurface.withOpacity(0.3),
+                                  ),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(28),
                                   ),
@@ -259,7 +265,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   Text(
                                     "Don't have an account? ",
                                     style: TextStyle(
-                                      color: Colors.grey[600],
+                                      color: Theme.of(context).colorScheme.onSurface.withOpacity(0.7),
                                       fontSize: 14,
                                     ),
                                   ),
